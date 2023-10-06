@@ -20,6 +20,12 @@ function equals() {
     expr = result;
 }
 
+function reset() {
+    playAudio();
+    exprShow.textContent = "";
+    expr = "";
+}
+
 function playAudio() {
     if (buttonAudio.paused) {
         buttonAudio.play();
