@@ -5,28 +5,30 @@ let numButtonContent = "";
 let exprShow = document.getElementById("exprShow");
 let buttonAudio = document.getElementById("buttonAudio");
 for (let i = 0; i < num.length; i++) {
-    num[i].addEventListener("click", function () {
+    num[i].addEventListener("click", () => {
         playAudio();
         numButtonContent = num[i].textContent;
         expr += numButtonContent
-        exprShow.textContent += numButtonContent;
+        exprShow.value += numButtonContent;
     });
 }
 
-function equals() {
+let resetButton = document.getElementById("resetButton");
+resetButton.addEventListener("click", () => {
+    playAudio();
+    exprShow.value = "";
+    expr = "";
+});
+
+let equalsButton = document.getElementById("equalsButton");
+equalsButton.addEventListener("click", () => {
     playAudio();
     let result = eval(expr);
-    exprShow.textContent = result;
+    exprShow.value = result;
     expr = result;
-}
+});
 
-function reset() {
-    playAudio();
-    exprShow.textContent = "";
-    expr = "";
-}
-
-function playAudio() {
+let playAudio = () => {
     if (buttonAudio.paused) {
         buttonAudio.play();
     } else {
