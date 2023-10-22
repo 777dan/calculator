@@ -11,40 +11,49 @@
 </head>
 
 <body>
-    <h1>Calculator</h1>
+    <div class="container text-center p-3">
+        <h1>Calculator</h1>
+    </div>
     <audio id="buttonAudio" src="buttonAudio.mp3"></audio>
     <div class="container">
-        <div class="row">
-            <input type="text" disabled id="exprShow" class="col-xl-5 px-1 p-3" />
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <input type="text" disabled id="exprShow" class="col-10 col-md-5 px-1 p-3" />
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-2 col-md-1 btn btn-primary numButtons"><button class="btn text-white">7</button></div>
+                <div class="col-2 col-md-1 btn btn-primary numButtons"><button class="btn text-white">8</button></div>
+                <div class="col-2 col-md-1 btn btn-primary numButtons"><button class="btn text-white">9</button></div>
+                <div class="col-2 col-md-1 btn btn-primary calcButtons"><button class="btn text-white">/</button></div>
+                <div id="resetButton" class="col-2 col-md-1 btn btn-primary"><button class="btn text-white">C</button></div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-2 col-md-1 btn btn-primary numButtons"><button class="btn text-white">4</button></div>
+                <div class="col-2 col-md-1 btn btn-primary numButtons"><button class="btn text-white">5</button></div>
+                <div class="col-2 col-md-1 btn btn-primary numButtons"><button class="btn text-white">6</button></div>
+                <div class="col-2 col-md-1 btn btn-primary calcButtons"><button class="btn text-white">*</button></div>
+                <div id="removeButton" class="col-2 col-md-1 btn btn-primary"><button class="btn text-white">&#9003;</button>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-2 col-md-1 btn btn-primary numButtons"><button class="btn text-white">1</button></div>
+                <div class="col-2 col-md-1 btn btn-primary numButtons"><button class="btn text-white">2</button></div>
+                <div class="col-2 col-md-1 btn btn-primary numButtons"><button class="btn text-white">3</button></div>
+                <div class="col-2 col-md-1 btn btn-primary calcButtons"><button class="btn text-white">-</button></div>
+                <div id="sqrtButton" class="col-2 col-md-1 btn btn-primary"><button class="btn text-white">&#8730;</button>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-2 col-md-1 btn btn-primary numButtons"><button class="btn text-white">0</button></div>
+                <div class="col-2 col-md-1 btn btn-primary calcButtons"><button class="btn text-white">.</button></div>
+                <div class="col-2 col-md-1 btn btn-primary calcButtons"><button class="btn text-white">+</button></div>
+                <div id="squareButton" class="col-2 col-md-1 btn btn-primary"><button class="btn text-white">x&sup2;</button>
+                </div>
+                <div id="equalsButton" class="col-2 col-md-1 btn btn-primary"><button class="btn text-white">=</button></div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">+</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">-</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">/</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">*</button></div>
-            <div id="resetButton" class="col-xl-1 btn btn-primary"><button class="btn text-white">C</button></div>
-        </div>
-        <div class="row">
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">1</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">2</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">3</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">4</button></div>
-        </div>
-        <div class="row">
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">5</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">6</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">7</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">8</button></div>
-        </div>
-        <div class="row">
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">9</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">0</button></div>
-            <div class="col-xl-1 btn btn-primary calcButtons"><button class="btn text-white">.</button></div>
-            <div id="equalsButton" class="col-xl-1 btn btn-primary"><button class="btn text-white">=</button></div>
-        </div>
-    </div>
-    
-    <script src="./script.js"></script>
+
+        <script src="./script.js"></script>
 </body>
 
 </html>
